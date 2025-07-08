@@ -1,0 +1,399 @@
+.talks-section {
+    padding: 4rem 2rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    scroll-margin-top: 0;
+    scroll-snap-align: none;
+}
+
+.talks-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.talks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Import Slick Carousel CSS */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.talk-card {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.talk-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-container {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+    transform: scale(1.02);
+}
+
+.carousel-video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.carousel-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.play-button {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.carousel-video-wrapper:hover .video-play-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-video-wrapper:hover .play-button {
+    transform: scale(1.1);
+}
+
+.talk-content {
+    padding: 1.5rem;
+}
+
+.talk-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+.talk-location {
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.talk-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+}
+
+.talk-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--secondary-text-color);
+}
+
+.image-gallery {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    width: 100%;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+/* Modal styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: zoomIn 0.3s ease;
+}
+
+.modal-image {
+    max-width: 95%;
+    max-height: 95vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.modal-video {
+    max-width: 95%;
+    max-height: 95vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background-color: black;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1002;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.modal-nav.prev {
+    left: 20px;
+}
+
+.modal-nav.next {
+    right: 20px;
+}
+
+.modal-nav:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Custom Slick Carousel Styles */
+.slick-dots {
+    bottom: 15px;
+}
+
+.slick-dots li button:before {
+    color: white;
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+}
+
+.slick-prev, .slick-next {
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-container:hover .slick-prev,
+.carousel-container:hover .slick-next {
+    opacity: 1;
+}
+
+.slick-prev {
+    left: 15px;
+}
+
+.slick-next {
+    right: 15px;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 24px;
+    opacity: 0.8;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.slick-prev:hover:before, .slick-next:hover:before {
+    opacity: 1;
+}
+
+.article-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+[data-theme="light"] .article-link {
+    color: var(--text-primary-light);
+}
+
+[data-theme="dark"] .article-link {
+    color: var(--text-primary-dark);
+}
+
+.article-link:hover {
+    transform: translateX(5px);
+    color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .talks-section {
+        padding: 3rem 1rem;
+    }
+
+    .talks-section h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .talks-container {
+        grid-template-columns: 1fr;
+    }
+
+    .talk-card {
+        padding: 1.25rem;
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    
+    .gallery-image {
+        height: 120px;
+    }
+
+    .carousel-container {
+        height: 250px;
+    }
+
+    .carousel-image,
+    .carousel-video-wrapper,
+    .carousel-video {
+        height: 250px;
+    }
+
+    .talk-content {
+        padding: 1.25rem;
+    }
+
+    .slick-prev, .slick-next {
+        width: 30px;
+        height: 30px;
+    }
+
+    .slick-prev:before, .slick-next:before {
+        font-size: 30px;
+    }
+
+    .modal-close {
+        top: -50px;
+        right: 0;
+    }
+
+    .modal-content {
+        max-width: 95vw;
+    }
+
+    .play-button {
+        font-size: 3rem;
+    }
+} 

@@ -1,0 +1,293 @@
+:root {
+  /* Light Theme Colors */
+  --bg-primary-light: #ffffff;
+  --bg-secondary-light: #f8f9fa;
+  --text-primary-light: #000000;
+  --text-secondary-light: #4a4a4a;
+  --accent-color-light: #2563eb;
+  --accent-color-hover-light: #1d4ed8;
+  --border-light: #e2e2e2;
+  --card-bg-light: rgba(255, 255, 255, 0.8);
+  --bg-hover-light: #f0f0f0;
+  --button-text-light: #ffffff;
+  --button-hover-light: #1d4ed8;
+
+  /* Dark Theme Colors */
+  --bg-primary-dark: #121212;
+  --bg-secondary-dark: #1a1a1a;
+  --text-primary-dark: #ffffff;
+  --text-secondary-dark: #b3b3b3;
+  --accent-color-dark: #3b82f6;
+  --accent-color-hover-dark: #60a5fa;
+  --border-dark: #333333;
+  --card-bg-dark: rgba(18, 18, 18, 0.8);
+  --bg-hover-dark: #1a1a1a;
+  --button-text-dark: #ffffff;
+  --button-hover-dark: #60a5fa;
+}
+
+/* Light Theme (default) */
+:root[data-theme="light"] {
+  --bg-primary: var(--bg-primary-light);
+  --bg-secondary: var(--bg-secondary-light);
+  --text-primary: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --accent-color: var(--accent-color-light);
+  --accent-color-hover: var(--accent-color-hover-light);
+  --border: var(--border-light);
+  --card-bg: var(--card-bg-light);
+  --bg-hover: var(--bg-hover-light);
+  --button-text: var(--button-text-light);
+  --button-hover: var(--button-hover-light);
+}
+
+/* Dark Theme */
+:root[data-theme="dark"] {
+  --bg-primary: var(--bg-primary-dark);
+  --bg-secondary: var(--bg-secondary-dark);
+  --text-primary: var(--text-primary-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --accent-color: var(--accent-color-dark);
+  --accent-color-hover: var(--accent-color-hover-dark);
+  --border: var(--border-dark);
+  --card-bg: var(--card-bg-dark);
+  --bg-hover: var(--bg-hover-dark);
+  --button-text: var(--button-text-dark);
+  --button-hover: var(--button-hover-dark);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  scroll-behavior: auto !important;
+  overflow-anchor: none;
+}
+
+html {
+  scroll-behavior: auto !important;
+  overflow-anchor: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 4px;
+  opacity: 0.7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity: 1;
+}
+
+/* Common Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.section {
+  padding: 6rem 0;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-primary);
+}
+
+.section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--accent-color), 
+    transparent
+  );
+}
+
+.section:nth-child(odd) {
+  background: var(--bg-secondary);
+}
+
+/* Text Gradient */
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-color-hover) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+}
+
+/* Light Theme */
+[data-theme="light"] .text-gradient {
+  -webkit-text-fill-color: var(--text-primary-light);
+  color: var(--text-primary-light);
+}
+
+/* Dark Theme */
+[data-theme="dark"] .text-gradient {
+  -webkit-text-fill-color: var(--text-primary-dark);
+  color: var(--text-primary-dark);
+}
+
+/* Button Styles */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: var(--accent-color);
+  border: none;
+  cursor: pointer;
+}
+
+/* Light Theme */
+[data-theme="light"] .button,
+[data-theme="light"] .button a {
+  color: var(--button-text-light);
+}
+
+[data-theme="light"] .button.secondary,
+[data-theme="light"] .button.secondary a {
+  color: var(--text-primary-light);
+  background: transparent;
+  border: 2px solid var(--accent-color);
+}
+
+[data-theme="light"] .button.project-link,
+[data-theme="light"] .button.project-link a {
+  color: var(--text-primary-light) !important;
+}
+
+/* Dark Theme */
+[data-theme="dark"] .button,
+[data-theme="dark"] .button a {
+  color: var(--button-text-dark);
+}
+
+[data-theme="dark"] .button.secondary,
+[data-theme="dark"] .button.secondary a {
+  color: var(--text-primary-dark);
+  background: transparent;
+  border: 2px solid var(--accent-color);
+}
+
+[data-theme="dark"] .button.project-link,
+[data-theme="dark"] .button.project-link a {
+  color: var(--text-primary-dark) !important;
+}
+
+.button:hover {
+  background: var(--accent-color-hover);
+  transform: translateY(-2px);
+}
+
+.button.secondary:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent-color-hover);
+}
+
+/* Ensure SVG icons inherit text color */
+.button svg {
+  stroke: currentColor;
+}
+
+/* Card Styles */
+.card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}

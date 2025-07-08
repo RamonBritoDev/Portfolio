@@ -1,0 +1,163 @@
+.experience-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience-section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: var(--text-primary);
+}
+
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.experience-card {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.experience-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.experience-header h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+}
+
+.experience-header .company {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin: 0.25rem 0;
+}
+
+.experience-header .period {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+  margin: 0.25rem 0;
+}
+
+.experience-description {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-description li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.experience-description li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+}
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  padding: 0.3rem 0.8rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: var(--accent);
+  color: white;
+  border-color: transparent;
+}
+
+.experience-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.experience-link:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.experience-link svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.experience-link:hover svg {
+  transform: translate(2px, -2px);
+}
+
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 3rem 1rem;
+  }
+
+  .experience-section h2 {
+    font-size: 2rem;
+  }
+
+  .experience-container {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-card {
+    padding: 1.25rem;
+  }
+
+  .experience-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .experience-header .company {
+    font-size: 1rem;
+  }
+
+  .experience-header .period {
+    font-size: 0.85rem;
+  }
+
+  .experience-description li {
+    font-size: 0.95rem;
+  }
+} 
