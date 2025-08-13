@@ -112,9 +112,9 @@ const Message = ({ text, isBot, options, onOptionClick }) => {
       <div className="message-content">
         {formatMessageContent(text)}
       </div>
-      
+
       {isBot && options && options.length > 0 && (
-        <motion.div 
+        <motion.div
           className="message-options"
           variants={optionsVariants}
           initial="initial"
@@ -127,7 +127,7 @@ const Message = ({ text, isBot, options, onOptionClick }) => {
                 key={index}
                 onClick={() => onOptionClick(option)}
                 variants={optionVariants}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   backgroundColor: 'var(--accent-color)',
                   color: 'white',

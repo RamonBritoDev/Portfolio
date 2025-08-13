@@ -11,6 +11,7 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
+  const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -97,10 +98,41 @@ const Navbar = () => {
     { id: 'chat', label: t.nav.chat }
   ];
 
-  const handleLanguageChange = (langCode) => {
+  const handleLanguageButtonClick = (event) => {
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    setIsLanguageDropdownOpen(!isLanguageDropdownOpen);
+  };
+
+  const handleLanguageChange = (event, langCode) => {
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    const savedPosition = window.pageYOffset;
     toggleLanguage(langCode);
+    setTimeout(() => {
+      window.scrollTo(0, savedPosition);
+    }, 0);
     setIsLanguageDropdownOpen(false);
   };
+
+  const handleMoreMenuClick = () => {
+    setIsMoreMenuOpen(!isMoreMenuOpen);
+  };
+
+  useEffect(() => {
+    const handleClickOutsideMore = (event) => {
+      if (!event.target.closest('.more-menu')) {
+        setIsMoreMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutsideMore);
+    return () => document.removeEventListener('click', handleClickOutsideMore);
+  }, []);
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
@@ -109,7 +141,48 @@ const Navbar = () => {
         style={{ scaleX: scrollProgress / 100 }}
       />
       <div className="navbar-container">
-        <motion.a 
+        {/* Menu de 3 pontinhos - mobile only */}
+        <div className="more-menu">
+          <button
+            className="more-button"
+            onClick={handleMoreMenuClick}
+            aria-label="Menu de navegação"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="1" />
+              <circle cx="12" cy="5" r="1" />
+              <circle cx="12" cy="19" r="1" />
+            </svg>
+          </button>
+          <AnimatePresence>
+            {isMoreMenuOpen && (
+              <motion.div
+                className="more-menu-dropdown"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.2 }}
+              >
+                {navItems.map(({ id, label }) => (
+                  <button
+                    key={id}
+                    className="more-menu-item"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(id);
+                      setIsMoreMenuOpen(false);
+                    }}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+
+        {/* Resto do código da navbar */}
+        <motion.a
           href="#home"
           className="nav-logo"
           initial="initial"
@@ -168,8 +241,9 @@ const Navbar = () => {
         <div className="nav-controls">
           <div className="language-switcher">
             <button 
+              type="button"
               className="language-button"
-              onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
+              onClick={handleLanguageButtonClick}
             >
               {languages.find(lang => lang.code === language)?.flag}
               <span className="language-name">{language.toUpperCase()}</span>
@@ -191,9 +265,11 @@ const Navbar = () => {
                 >
                   {languages.map((lang) => (
                     <button
+                      type="button"
                       key={lang.code}
+                      data-lang={lang.code}
                       className={`language-option ${language === lang.code ? 'active' : ''}`}
-                      onClick={() => handleLanguageChange(lang.code)}
+                      onClick={(e) => handleLanguageChange(e, lang.code)}
                     >
                       {lang.flag} <span>{lang.name}</span>
                     </button>
@@ -224,4 +300,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;

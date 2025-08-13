@@ -12,28 +12,21 @@ const Projects = () => {
         title: 'Portfolio Interativo',
         description: 'Portfolio profissional com interface de chat interativa multilíngue, design responsivo e moderno.',
         tags: ['React.js', 'Context API', 'UX/UI', 'Multilíngue'],
-        link: '#',
+        link: 'https://github.com/RamonBritoDev/Portfolio',
         icon: '💻'
       },
       {
         title: 'IA Local para Atendimento',
         description: 'Sistema de atendimento via WhatsApp usando LLMs locais, com foco em segurança offline.',
         tags: ['Docker', 'Qwen', 'Waha API', 'WhatsApp'],
-        link: '#',
+        link: 'https://github.com/RamonBritoDev/IA-Local-Com-Whatsapp',
         icon: '🤖'
-      },
-      {
-        title: 'Robot Dog Apollo',
-        description: 'Projeto de automação residencial segura com integração de sensores e controle inteligente.',
-        tags: ['ESP32', 'IoT', 'Automação', 'Sensores'],
-        link: '#',
-        icon: '🐕'
       },
       {
         title: 'Gerador de Senhas',
         description: 'Ferramenta online para criação de senhas seguras, aleatórias e livres de padrões fracos.',
         tags: ['Segurança', 'Web', 'Criptografia'],
-        link: 'https://linkd.in/dgWpkKaw',
+        link: 'https://github.com/RamonBritoDev/Projeto-gerador-de-senhas',
         icon: '🔐'
       }
     ],
@@ -42,28 +35,21 @@ const Projects = () => {
         title: 'Interactive Portfolio',
         description: 'Professional portfolio with multilingual interactive chat interface, responsive and modern design.',
         tags: ['React.js', 'Context API', 'UX/UI', 'Multilingual'],
-        link: '#',
+        link: 'https://github.com/RamonBritoDev/Portfolio',
         icon: '💻'
       },
       {
         title: 'Local AI for Support',
         description: 'WhatsApp support system using local LLMs, focused on offline security.',
         tags: ['Docker', 'Qwen', 'Waha API', 'WhatsApp'],
-        link: '#',
+        link: 'https://github.com/RamonBritoDev/IA-Local-Com-Whatsapp',
         icon: '🤖'
-      },
-      {
-        title: 'Robot Dog Apollo',
-        description: 'Secure home automation project with sensor integration and smart control.',
-        tags: ['ESP32', 'IoT', 'Automation', 'Sensors'],
-        link: '#',
-        icon: '🐕'
       },
       {
         title: 'Password Generator',
         description: 'Online tool for creating secure, random passwords free from weak patterns.',
         tags: ['Security', 'Web', 'Cryptography'],
-        link: 'https://linkd.in/dgWpkKaw',
+        link: 'https://github.com/RamonBritoDev/Projeto-gerador-de-senhas',
         icon: '🔐'
       }
     ],
@@ -72,28 +58,21 @@ const Projects = () => {
         title: 'Portfolio Interactivo',
         description: 'Portfolio profesional con interfaz de chat interactiva multilingüe, diseño responsivo y moderno.',
         tags: ['React.js', 'Context API', 'UX/UI', 'Multilingüe'],
-        link: '#',
+        link: 'https://github.com/RamonBritoDev/Portfolio',
         icon: '💻'
       },
       {
         title: 'IA Local para Atención',
         description: 'Sistema de atención vía WhatsApp usando LLMs locales, con enfoque en seguridad offline.',
         tags: ['Docker', 'Qwen', 'Waha API', 'WhatsApp'],
-        link: '#',
+        link: 'https://github.com/RamonBritoDev/IA-Local-Com-Whatsapp',
         icon: '🤖'
-      },
-      {
-        title: 'Robot Dog Apollo',
-        description: 'Proyecto de automatización residencial segura con integración de sensores y control inteligente.',
-        tags: ['ESP32', 'IoT', 'Automatización', 'Sensores'],
-        link: '#',
-        icon: '🐕'
       },
       {
         title: 'Generador de Contraseñas',
         description: 'Herramienta online para crear contraseñas seguras, aleatorias y libres de patrones débiles.',
         tags: ['Seguridad', 'Web', 'Criptografía'],
-        link: 'https://linkd.in/dgWpkKaw',
+        link: 'https://github.com/RamonBritoDev/Projeto-gerador-de-senhas',
         icon: '🔐'
       }
     ]
@@ -181,4 +160,4 @@ const Projects = () => {
   );
 };
 
-export default Projects; 
+export default Projects;

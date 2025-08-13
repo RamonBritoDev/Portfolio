@@ -213,4 +213,8 @@
   .project-card h3 {
     font-size: 1.3rem;
   }
-} 
+}
+
+[data-theme="dark"] .tag:hover {
+  color: #ffffff;
+}

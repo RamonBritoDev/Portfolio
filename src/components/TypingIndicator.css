@@ -22,7 +22,7 @@
   width: 8px;
   height: 8px;
   margin: 0 2px;
-  background-color: var(--text-secondary);
+  background-color: var(--text-primary);
   border-radius: 50%;
   display: inline-block;
   animation: typing 1.4s infinite ease-in-out;
@@ -43,15 +43,15 @@
 @keyframes typing {
   0% {
     transform: translateY(0px);
-    background-color: var(--text-secondary);
+    background-color: var(--text-primary);
   }
   28% {
     transform: translateY(-7px);
-    background-color: var(--accent-color);
+    background-color: var(--text-primary);
   }
   44% {
     transform: translateY(0px);
-    background-color: var(--text-secondary);
+    background-color: var(--text-primary);
   }
 }
 

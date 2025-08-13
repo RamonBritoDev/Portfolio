@@ -109,7 +109,7 @@
   z-index: 1;
   box-shadow: var(--shadow);
   border: 1px solid var(--border);
-  background: var(--card-bg);
+  background: var(--bg-primary);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
@@ -135,7 +135,7 @@
 
 .tech-item:hover {
   background: var(--accent);
-  color: white;
+  color: var(--text-primary);
   border-color: transparent;
 }
 
@@ -202,4 +202,19 @@
     padding: 0.4rem 0.8rem;
     font-size: 0.8rem;
   }
-} 
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.social-icons a {
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--accent-color);
+}

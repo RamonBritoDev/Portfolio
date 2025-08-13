@@ -385,8 +385,8 @@
     }
 
     .modal-close {
-        top: -50px;
-        right: 0;
+        top: 15px;
+        right: 15px;
     }
 
     .modal-content {

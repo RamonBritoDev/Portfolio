@@ -118,8 +118,8 @@ const translations = {
     },
     projects: {
       title: 'Proyectos Destacados',
-      description: 'Conoce algunos de mis principales proyectos en ciberseguridad y educación.',
-      viewProject: 'Ver Proyecto'
+      description: 'Conoce algunos de mis principales proyectos en cibersegurança y educación.',
+      viewProject: 'Ver Projeto'
     },
     chat: {
       title: '¡Hablemos! 👋',
@@ -135,10 +135,10 @@ const translations = {
         contact: '📱 ¿Cómo puedo contactarte?'
       },
       responses: {
-        about: '🎯 ¡Encantado de conocerte! Soy Ramon Brito, 24 años, estudiante de Ingeniería de Software y apasionado por la tecnología:\n\n• Director de Educación en LaSEC (Liga Académica de Ciberseguridad)\n• Desarrollador enfocado en ciberseguridad e IA\n• Ponente y Educador en Tecnología\n• Comprometido con la educación tecnológica accesible y segura\n\n¿Te gustaría saber más sobre algún área específica?',
-        experience: '💼 ¡Qué bueno tu interés! Aquí está mi experiencia profesional:\n\n• Pasante de TI - CRECI-CE (2024 - Presente)\n  - Soporte técnico (tickets N1)\n  - Mantenimiento y optimización de infraestructura\n  - Participación en proyectos de desarrollo\n\n• Pasante Técnico - SEINF (2021)\n  - Análisis de proyectos de obras públicas\n  - Creación de informes técnicos\n\n• Director de Educación - LaSEC\n  - Creación de contenidos educativos\n  - Organización de eventos de seguridad\n  - Formación de nuevos profesionales\n\n¿Te gustaría saber más detalles sobre alguna de estas experiencias?',
-        projects: '🚀 ¡Excelente pregunta! Aquí están mis principales proyectos:\n\n• Portfolio Interactivo\n  - Interfaz de chat multilingüe\n  - Diseño responsivo y moderno\n  - React.js y Context API\n\n• IA Local para Atención\n  - Integración con WhatsApp\n  - LLMs locales y Docker\n  - Seguridad offline\n\n• Robot Dog Apollo\n  - Integración de sensores\n  - Automatización residencial segura\n  - ESP32 y HLK-LD2410B\n\n• Generador de Contraseñas Seguras\n  - Herramienta online\n  - Contraseñas aleatorias y seguras\n\n¿Te gustaría conocer más sobre alguno de estos proyectos?',
-        skills: '💻 ¡Me alegro que preguntes! Aquí están mis principales habilidades:\n\n• Lenguajes y Frameworks\n  - Python, Java, JavaScript, C++\n  - Node.js, Flask, React.js\n\n• DevOps e Infraestructura\n  - Git, Docker, REST APIs\n  - Linux (Arch, Ubuntu)\n  - SQL y CLI\n\n• Ciberseguridad\n  - LLMs locales\n  - Desafíos CTF\n  - Firewall en Python\n\n• Habilidades Blandas\n  - Didáctica\n  - Liderazgo de equipo\n  - Resolución de problemas\n\n¿Te gustaría saber más sobre alguna de estas tecnologías?',
+        about: '🎯 ¡Encantado de conocerte! Soy Ramon Brito, 24 años, estudiante de Ingeniería de Software y apasionado por la tecnología:\n\n• Director de Educación en LaSEC (Liga Académica de Ciberseguridad)\n• Desarrollador enfocado en ciberseguridad e IA\n• Ponente y Educador en Tecnología\n• Comprometido com a educação tecnológica acessível e segura\n\n¿Te gustaría saber más sobre algún área específica?',
+        experience: '💼 ¡Qué bueno tu interés! Aquí está mi experiencia profissional:\n\n• Pasante de TI - CRECI-CE (2024 - Presente)\n  - Soporte técnico (tickets N1)\n  - Mantenimiento y optimización de infraestrutura\n  - Participación en proyectos de desenvolvimento\n\n• Pasante Técnico - SEINF (2021)\n  - Análisis de proyectos de obras públicas\n  - Creación de informes técnicos\n\n• Director de Educación - LaSEC\n  - Creación de conteúdos educacionais\n  - Organização de eventos de segurança\n  - Formação de novos profissionais\n\n¿Te gustaría saber más detalles sobre alguna de estas experiencias?',
+        projects: '🚀 ¡Excelente pregunta! Aquí están mis principales proyectos:\n\n• Portfolio Interativo\n  - Interfaz de chat multilingüe\n  - Diseño responsivo e moderno\n  - React.js e Context API\n\n• IA Local para Atendimento\n  - Integración con WhatsApp\n  - LLMs locais e Docker\n  - Segurança offline\n\n• Robot Dog Apollo\n  - Integración de sensores\n  - Automatización residencial segura\n  - ESP32 e HLK-LD2410B\n\n• Generador de Contraseñas Seguras\n  - Herramienta online\n  - Contraseñas aleatórias e seguras\n\n¿Te gustaría conocer más sobre alguno de estos projetos?',
+        skills: '💻 ¡Me alegro que preguntes! Aquí están mis principales habilidades:\n\n• Lenguajes y Frameworks\n  - Python, Java, JavaScript, C++\n  - Node.js, Flask, React.js\n\n• DevOps e Infraestructura\n  - Git, Docker, REST APIs\n  - Linux (Arch, Ubuntu)\n  - SQL y CLI\n\n• Ciberseguridad\n  - LLMs locais\n  - Desafíos CTF\n  - Firewall en Python\n\n• Habilidades Blandas\n  - Didáctica\n  - Liderazgo de equipe\n  - Resolução de problemas\n\n¿Te gustaría saber más sobre alguna de estas tecnologías?',
         education: '📚 ¡Gracias por preguntar! Aquí está mi formación:\n\n• Grado en Ingeniería de Software\n  - Centro Universitário Ateneu\n  - 4º Semestre (2024-2027)\n\n• Escuela Secundaria Técnica\n  - EEEP Juarez Távora\n  - Completado en 2021\n\n• Certificaciones\n  - ITIL Introduction (2024)\n\n• Eventos y Charlas\n  - Universo UniAteneu\n  - Competencia CTF - LaSEC\n  - Inclusión Digital en Lar Três Irmãs\n\n¿Te gustaría saber más sobre algún área específica?',
         contact: '📱 ¡Me alegro que estés interesado! Aquí están las mejores formas de contactarme:\n\n• Teléfono\n  - +55 (85) 99253-9800\n\n• Email\n  - ramonbritodev@gmail.com\n\n• LinkedIn\n  - linkedin.com/in/ramon-brito-439975279\n\n• Instagram de LaSEC\n  - @cybersecoficial\n\n¡Estaré encantado de hablar sobre proyectos, colaboraciones o responder tus preguntas! 😊',
         default: 'Hmm, no entendí muy bien. 🤔\n¿Qué tal si me preguntas sobre:\n• Mi experiencia profesional\n• Proyectos que he desarrollado\n• Habilidades técnicas\n• Formación académica\n• Cómo contactarme\n\n¡O elige una de las opciones abajo! 👇'
@@ -152,8 +152,8 @@ const LanguageContext = createContext();
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState('pt');
 
-  const toggleLanguage = (lang) => {
-    setLanguage(lang);
+  const toggleLanguage = (langCode) => {
+    setLanguage(langCode || 'pt');
   };
 
   const t = translations[language];
@@ -171,4 +171,4 @@ export const useLanguage = () => {
     throw new Error('useLanguage must be used within a LanguageProvider');
   }
   return context;
-}; 
+};

@@ -358,3 +358,61 @@
     height: 34px;
   }
 }
+
+.message-form {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.message-input {
+  flex-grow: 1;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.send-button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.send-button:hover {
+  background: var(--accent-hover);
+}
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.option-button {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.option-button:hover {
+  background: var(--accent);
+  color: white;
+  border-color: transparent;
+}
